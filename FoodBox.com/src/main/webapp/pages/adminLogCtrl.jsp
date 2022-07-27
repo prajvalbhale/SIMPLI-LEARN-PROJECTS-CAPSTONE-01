@@ -8,7 +8,8 @@
 <head>
 <%@include file="./base.jsp" %>
 <meta charset="ISO-8859-1">
-<title th:text="${name}"></title>
+<title>Prajval Bhale</title>
+<link rel = "icon" href ="img/staticpage.png" type = "image/x-icon">
 <style type="text/css">
 body{
     background-color: #dee9ff;

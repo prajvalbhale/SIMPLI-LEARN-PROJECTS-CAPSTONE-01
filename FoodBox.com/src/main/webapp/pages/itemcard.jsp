@@ -111,7 +111,7 @@ font-weight: 100;
 
 				<!--Card image-->
 				<div class="view view-cascade overlay text-center">
-					<img class="card-img-top" src="https://i.imgur.com/9VZGPJF.jpg"
+					<img class="card-img-top" src="img/pizza1.jpg"
       alt="" >
 					<a>
 						<div class="mask rgba-white-slight"></div>

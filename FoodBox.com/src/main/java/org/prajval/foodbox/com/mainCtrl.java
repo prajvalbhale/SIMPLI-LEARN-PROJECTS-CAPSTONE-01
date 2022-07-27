@@ -34,6 +34,8 @@ public class mainCtrl {
 	@Autowired
 	User_Repo u_repo;
 	
+	
+	
 	/*INDEX PAGE ALL OPERETIONS START's*/
 	@ResponseBody
 	@RequestMapping("/ShowIndexPage")
@@ -196,6 +198,7 @@ public class mainCtrl {
 	
 	
 	/*USER OPERETIONS START's*/
+		
 	@ResponseBody
 	@RequestMapping("/UserLoginandSignUp")
 	public ModelAndView UserLoginandSignUp(Model model)
@@ -218,6 +221,10 @@ public class mainCtrl {
 		//u.setCon_pass(passwordEncoder.encode(req.getParameter("con_pass")));
 		u.setCon_pass(req.getParameter("con_pass"));
 		u.setGender(req.getParameter("gender"));
+		u.setCard_number("121213131414");
+		u.setExp_Date("0126");
+		u.setCVV("120");
+		u.setPayment_method("CARD");
 		u.setSignin_Date(LocalDate.now());
 		User uu = u_dao.insert(u);
 		if(uu!=null) 
@@ -228,8 +235,7 @@ public class mainCtrl {
 			mv.setViewName("FailedUserSignUp.jsp");
 		}
 		return mv;
-	}
-	
+	}	
 	
 	@ResponseBody
 	@RequestMapping("/ShowUserHomePage")
@@ -425,7 +431,11 @@ public class mainCtrl {
 		u.setUser_phone(req.getParameter("user_phone"));		
 		u.setCon_add(req.getParameter("user_add"));
 		u.setBuy_Date(LocalDate.now());
-		User uu = u_dao.insert(u);
+		User uu = u_dao.update(u); //insert(u);
+//			if (uu==null) 
+//			{
+//				mv.setViewName("FailedUserPhoneisInvalid.jsp");
+//			}
 		
 		if(uu!=null)
 		{
@@ -433,6 +443,49 @@ public class mainCtrl {
 		}else
 		{
 			mv.setViewName("FailedRedirectPayment_AddressAdd.jsp");
+		}
+		return mv;
+	}
+	
+	@ResponseBody
+	@RequestMapping("/userpaymentprocessing")
+	public ModelAndView UserPaymentProcessing(HttpServletRequest req, HttpServletResponse res)
+	{
+		ModelAndView mv = new ModelAndView();
+		User u = new User();
+		u.setUser_phone(req.getParameter("user_phone"));		
+		u.setCard_number(req.getParameter("card_number"));
+		u.setExp_Date(req.getParameter("exp_date"));
+		u.setCVV(req.getParameter("cvvno"));
+		u.setPayment_date(LocalDate.now());
+		u.setPayment_method("CARD");
+		u.setStatus("PAID");
+		User us = u_dao.UserPayBill(u); //insert(u);		
+		if(us!=null)
+		{
+			mv.setViewName("SuccessPaymentGetBillNow.jsp");
+		}else
+		{
+			mv.setViewName("FailedRedirectPayment_AddressAdd.jsp");
+		}
+		
+		return mv;
+	}
+	
+	@ResponseBody
+	@RequestMapping("/user-get-bill-now")
+	public ModelAndView UserGetBillNow(HttpServletRequest req, HttpServletResponse res)
+	{
+		ModelAndView mv = new ModelAndView();
+		String GetBill = req.getParameter("user_phone");
+		List<User> UserBill = u_dao.UserBillGenarate(GetBill);
+		mv.addObject("UserBill", UserBill);
+		if(u_dao!=null)
+		{
+			mv.setViewName("SuccessUserBillGenerate.jsp");
+		}else
+		{
+			mv.setViewName("FailedUserBillGenerate.jsp");
 		}
 		return mv;
 	}

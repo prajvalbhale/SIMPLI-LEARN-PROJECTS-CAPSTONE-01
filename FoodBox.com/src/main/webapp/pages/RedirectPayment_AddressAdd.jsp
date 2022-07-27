@@ -97,6 +97,7 @@ button{
 </style>
 </head>
 <body>
+<form action="/userpaymentprocessing">
 	<div id="cont" class="container d-flex justify-content-center mt-5 mb-5">
 
 
@@ -120,9 +121,16 @@ button{
 								<div class="card-body payment-card-body">
 
 									<span class="font-weight-normal card-text">Card Number</span>
-								<div class="input">										
+
+									<div class="form-group col-6">
+										<input type="number" class="form-control item"
+											placeholder="Phone Number" name="user_phone"
+											required="required">
+									</div>
+
+									<div class="input">										
 									<i class="fa fa-credit-card"></i> 
-									<input type="number" class="form-control" name="CardNumber" placeholder="0000 0000 0000 0000">
+									<input type="number" class="form-control" name="card_number" placeholder="0000 0000 0000 0000">
 								</div>
 
 									<div class="row mt-3 mb-3">
@@ -132,7 +140,7 @@ button{
 											<span class="font-weight-normal card-text">Expiry Date</span>
 											<div class="input">
 												<i class="fa fa-calendar"></i> 
-												<input type="text" class="form-control" name="exDate" placeholder="MM/YY">
+												<input type="text" class="form-control" name="exp_date" placeholder="MM/YY">
 											</div>
 
 										</div>
@@ -144,14 +152,23 @@ button{
 											<div class="input">
 
 												<i class="fa fa-lock"></i> 
-												<input type="text" class="form-control" name="cvvNo" placeholder="000">
+												<input type="text" class="form-control" name="cvvno" placeholder="000">
 
 											</div>
 
 										</div>
 
-	<a href="#"><button type="submit" class="btn btn-outline-success" style="height: 40px;"><b>PAY BILL</b></button></a>
-	<a href="/UserGiveReview"><button type="submit" class="btn btn-outline-success" style="height: 40px;"><b>REVIEW</b></button></a>
+<!-- 						<a href=""> -->
+							<button type="submit" class="btn btn-outline-success" style="height: 40px;">
+								<b>PAY BILL</b>
+							</button>
+<!-- 						</a> -->
+						
+						<a href="#">
+							<button type="submit" class="btn btn-outline-success" style="height: 40px;">
+								<b>REVIEW</b>
+							</button>
+						</a>
 									</div>
 
 									<span class="text-muted certificate-text"><i
@@ -174,5 +191,6 @@ button{
 
 
 	</div>
+	</form>
 </body>
 </html>

@@ -84,7 +84,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="/ShowIndexPage" class="nav-item nav-link active">HOME</a>
-                            <a href="/ShowAdminOpr" class="nav-item nav-link">ADMIN</a>
+                            <a href="/AdminLogFromIndex" class="nav-item nav-link">ADMIN</a>
                             <a href="/ShowAboutPage" class="nav-item nav-link">ABOUT</a>
                             <a href="/ShowCuisinPage" class="nav-item nav-link">CUISINES</a>
                             <a href="/ShowContactPage" class="nav-item nav-link">CONTACT</a>

@@ -2,15 +2,13 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Prajval Bhale</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 	<link rel = "icon" href ="img/staticpage.png" type = "image/x-icon">
-
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -82,13 +80,12 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav py-0">
                             <a href="/ShowIndexPage" class="nav-item nav-link active">HOME</a>
-                            <a href="/ShowAdminOpr" class="nav-item nav-link">ADMIN</a>
+                            <a href="/AdminLogFromIndex" class="nav-item nav-link">ADMIN</a>
                             <a href="/ShowAboutPage" class="nav-item nav-link">ABOUT</a>
                             <a href="/ShowCuisinPage" class="nav-item nav-link">CUISINES</a>
                             <a href="/ShowContactPage" class="nav-item nav-link">CONTACT</a>
                             <a href="/UserLoginandSignUp" class="nav-item nav-link">LOGIN/SIGNUP</a>
-                        </div>
-                       
+                        </div>                       
                     </div>
                 </nav>
             </div>

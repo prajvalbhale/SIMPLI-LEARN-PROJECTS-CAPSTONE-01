@@ -10,7 +10,7 @@
 <%@include file="./base.jsp" %>
 <link rel = "icon" href ="img/staticpage.png" type = "image/x-icon">
 <meta charset="ISO-8859-1">
-<title th:text="${name}"></title>
+<title> Prajval Bhale</title>
 <style type="text/css">
 body{
     background-color: #dee9ff;

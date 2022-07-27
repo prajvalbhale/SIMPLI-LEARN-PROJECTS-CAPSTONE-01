@@ -34,6 +34,12 @@ public class User {
 	private LocalDate Signin_Date;
 //	LocalDate signin_date = LocalDate.now();
 	
+	private String card_number="cardnumberin";
+	private String Exp_Date="exda";
+	private String CVV="cvn";
+	private String payment_method;
+	private LocalDate payment_date;
+	private String status="UN-PAID";
 
 	@ManyToOne
 	@PrimaryKeyJoinColumn(referencedColumnName = "user_id")
