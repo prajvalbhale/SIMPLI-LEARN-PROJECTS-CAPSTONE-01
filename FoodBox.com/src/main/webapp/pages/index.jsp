@@ -226,7 +226,7 @@
                             <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
                             <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
                         </ul><br>
-                        <a href="/userlogin"><button type="submit" class="btn btn-outline-success">Log In</button></a>
+                        <a href="/user-login"><button type="submit" class="btn btn-outline-success">Log In</button></a>
                         <a href="/UserLoginandSignUp"><button type="submit" class="btn btn-outline-info">Sign Up</button></a>
                     </div>                
                 </div>

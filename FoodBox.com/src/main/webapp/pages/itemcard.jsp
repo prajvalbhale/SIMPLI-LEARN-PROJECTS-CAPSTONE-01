@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%@ include file="./base.jsp" %>
 <meta charset="ISO-8859-1">
 <title>Prajval Bhale</title>
 <link rel = "icon" href ="img/staticpage.png" type = "image/x-icon">

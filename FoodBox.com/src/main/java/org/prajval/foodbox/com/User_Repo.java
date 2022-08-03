@@ -17,11 +17,11 @@ public interface User_Repo extends JpaRepository<User, Integer>{
 	@Query("select u from User u where u.user_mail=?1")
 	public User findAdminByMail(String user_mail);
 	
-// 	@Query("select u from User u where u.con_pass=?1")
-// 	public User findAdminBypass(String con_pass);
+	@Query("select u from User u where u.con_pass=?1")
+	public User findAdminBypass(String con_pass);
 	
-// 	@Query("select u from User u where u.user_phone=?1")
-// 	public List<User> findByPhoneforBill(String user_phone);
+	@Query("select u from User u where u.user_phone=?1")
+	public List<User> findByPhoneforBill(String user_phone);
 
 	
 }
